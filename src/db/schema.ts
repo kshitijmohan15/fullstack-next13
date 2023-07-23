@@ -15,6 +15,7 @@ import {
 export const products = mysqlTable("products", {
 	id: serial("id").primaryKey(),
 	name: varchar("userId", { length: 191 }).notNull(),
+    price: decimal("price", { precision: 10, scale: 2 }).notNull(),
 	createdAt: timestamp("createdAt").defaultNow(),
 });
 
